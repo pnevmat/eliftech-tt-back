@@ -17,7 +17,7 @@ app.use(
     //   'Access-Control-Allow-Origin': '*',
     // },
     // 'https://pnevmat.github.io/eliftech-tt-front/'
-    origin: 'https://pnevmat.github.io/eliftech-tt-front/',
+    origin: 'https://pnevmat.github.io/',
     credentials: true,
   }),
 );
