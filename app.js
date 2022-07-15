@@ -13,25 +13,23 @@ const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 app.use(logger(formatsLogger));
 app.use(
   cors({
-    header: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': '*',
-      'Access-Control-Allow-Headers': '*',
-      'Access-Control-Allow-Credentials': true,
-    },
-    // 'https://pnevmat.github.io/eliftech-tt-front/'
-    // origin: 'https://pnevmat.github.io/',
-    // credentials: true,
+    origin: '*',
+    methods: 'GET,POST,DELETE',
+    preflightContinue: false,
   }),
+  // {
+  //   header: {
+  //     'Access-Control-Allow-Origin': '*',
+  //     'Access-Control-Allow-Methods': '*',
+  //     'Access-Control-Allow-Headers': '*',
+  //     'Access-Control-Allow-Credentials': true,
+  //   },
+  //   // 'https://pnevmat.github.io/eliftech-tt-front/'
+  //   // origin: 'https://pnevmat.github.io/',
+  //   // credentials: true,
+  // }
 );
 app.use(express.json());
-// app.use(function (req, res, next) {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Methods', '*');
-//   res.setHeader('Access-Control-Allow-Headers', '*');
-//   res.setHeader('Access-Control-Allow-Credentials', true);
-//   next();
-// });
 
 app.use('/shops', shopsRouter);
 app.use('/products', productsRouter);
