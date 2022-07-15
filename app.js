@@ -16,7 +16,7 @@ app.use(
     header: {
       'Access-Control-Allow-Origin': '*',
     },
-    origin: ['https://pnevmat.github.io/eliftech-tt-front/'],
+    origin: 'https://pnevmat.github.io/eliftech-tt-front/',
     credentials: true,
   }),
 );
