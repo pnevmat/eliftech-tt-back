@@ -13,6 +13,9 @@ const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 app.use(logger(formatsLogger));
 app.use(
   cors({
+    header: {
+      'Access-Control-Allow-Origin': '*',
+    },
     origin: ['https://pnevmat.github.io/eliftech-tt-front/'],
     credentials: true,
   }),
