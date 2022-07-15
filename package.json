@@ -1,0 +1,41 @@
+{
+  "name": "eliftech-tt-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node ./bin/server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon ./bin/server.js",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js"
+  },
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnevmat/eliftech-tt.git"
+  },
+  "author": "Vadim Kravchenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnevmat/eliftech-tt/issues"
+  },
+	"homepage": "https://github.com/pnevmat/eliftech-tt#readme",
+  "main": "app.js",
+	"keywords": [],
+  "dependencies": {
+    "cloudinary": "^1.30.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "mongoose": "^6.4.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.19"
+  }
+}
