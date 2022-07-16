@@ -11,24 +11,7 @@ const app = express();
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 
 app.use(logger(formatsLogger));
-app.use(
-  cors({
-    origin: '*',
-    methods: 'GET,POST,DELETE',
-    preflightContinue: false,
-  }),
-  // {
-  //   header: {
-  //     'Access-Control-Allow-Origin': '*',
-  //     'Access-Control-Allow-Methods': '*',
-  //     'Access-Control-Allow-Headers': '*',
-  //     'Access-Control-Allow-Credentials': true,
-  //   },
-  //   // 'https://pnevmat.github.io/eliftech-tt-front/'
-  //   // origin: 'https://pnevmat.github.io/',
-  //   // credentials: true,
-  // }
-);
+app.use(cors());
 app.use(express.json());
 
 app.use('/shops', shopsRouter);
